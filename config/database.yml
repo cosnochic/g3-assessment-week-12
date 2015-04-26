@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: gschool
+  username: 
   pool: 5
 
 development:
