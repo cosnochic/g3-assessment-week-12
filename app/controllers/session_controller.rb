@@ -20,4 +20,6 @@ class SessionController < ApplicationController
       session[:user_id] = nil
       redirect_to '/signin', notice: "You are now logged out."
    end
+
+   
 end
