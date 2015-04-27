@@ -6,14 +6,7 @@
 <hr>
 
 <% @movies.each do |movie| %>
-<strong><%= movie.name %></strong> (<%= movie.year.strftime("%Y") %>)
-
-<br>
-
-<%= movie.synopsis %>
-
-
-<br>
-<br>
-
+  <p><b><%= movie.name %> (<%= movie.year %>)</b></p>
+  <p> <%= movie.synopsis %></p>
 <% end %>
+<br>
