@@ -6,7 +6,6 @@
 <hr>
 
 <% @movies.each do |movie| %>
-  <p><b><%= movie.name %> (<%= movie.year %>)</b></p>
+  <strong><%= movie.name %> (<%= movie.year %>)</strong>
   <p> <%= movie.synopsis %></p>
 <% end %>
-<br>

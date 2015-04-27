@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'reviews/index'
+
+  get 'reviews/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,6 +15,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
+  resources :reviews
 
   get '/signin' => 'session#new'
   post '/signin' => 'session#create'
