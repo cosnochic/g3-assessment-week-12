@@ -3,17 +3,28 @@
 
 <hr>
 
-<% form_for @movies do |f| %>
+<%= form_for @movie do |f| %>
+
+<div class="form-group">
 <%= f.label :name %>
-<%= f.text :name %>
+<%= f.text_field :name %>
+</div>
 
+<br>
 
+<div class="form-group">
 <%= f.label :year %>
-<%= f.number :year %>
+<%= f.date_field :year %>
+</div>
 
+<br>
+
+<div class="form-group">
 <%= f.label :synopsis %>
-<%= f.text :synopsis %>
+<%= f.text_area :synopsis %>
+</div>
 
+<br>
 
 <%= f.submit %>
 <% end %>
