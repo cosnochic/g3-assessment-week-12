@@ -21,5 +21,5 @@ class SessionController < ApplicationController
       redirect_to '/signin', notice: "You are now logged out."
    end
 
-   
+
 end

@@ -1,0 +1,19 @@
+<strong> <h1> Cageflix </h1> </strong>
+<h2> Netflix for Nic Cage Movies </h2>
+
+<hr>
+
+<% form_for @movies do |f| %>
+<%= f.label :name %>
+<%= f.text :name %>
+
+
+<%= f.label :year %>
+<%= f.number :year %>
+
+<%= f.label :synopsis %>
+<%= f.text :synopsis %>
+
+
+<%= f.submit %>
+<% end %>
