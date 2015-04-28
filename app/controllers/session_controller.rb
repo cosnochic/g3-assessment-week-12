@@ -2,15 +2,16 @@ class SessionController < ApplicationController
 
 
    def new
+      @user = User.new
    end
 
    def create
-      @user = User.find(params[:username])
+      user = User.find_by_username(params[:username])
       if user && user.authenticate(params[:password])
-         session[:user_id] = @user.id
+         session[:user_id] = user.id
          redirect_to movies_path
       else
-         render '/signin'
+         render '/signin', notice: "Username and password are invalid."
       end
    end
 
